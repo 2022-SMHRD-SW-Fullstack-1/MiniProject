@@ -6,7 +6,7 @@ public class Main {
 		
 		System.out.println("First Commit");
 		System.out.println("Second Commit!");
-		
+		System.out.println("안녕");
 	}
 
 }
