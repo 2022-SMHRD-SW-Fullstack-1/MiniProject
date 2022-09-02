@@ -4,4 +4,6 @@ public class KakaoCharacter {
 
 	private String name;
 	
+	
+	
 }
