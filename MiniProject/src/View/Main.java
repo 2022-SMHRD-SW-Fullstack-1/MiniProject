@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
+		//주석
 		Scanner sc=new Scanner(System.in);
 		while(true) {
 			System.out.println("[1] 회원가입 [2] 로그인 [3] 탈퇴 [4]종료 ");
