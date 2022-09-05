@@ -22,12 +22,12 @@ public class mainController {
 	public ArrayList<MemberDTO> Login() {
 		
 		
-		return null;
+		return dao.login();
 	}
 	
 	// 탈퇴
-	public void Dropout() {
-		
+	public void Dropout(String id, String pw) {
+		dao.delete(id, pw);
 	}
 	
 	

@@ -132,7 +132,14 @@ public class Main {
 				}
 
 			} else if (loginMenu == 3) {//회원가입 탈퇴
-
+				System.out.print("삭제할 아이디 입력: ");
+				String id=sc.next();
+				System.out.print("비밀번호를 입력하세요: ");
+				String pw=sc.next();
+				System.out.println("삭제되었습니다.");
+				mc.Dropout(id,pw);
+				
+				
 			} else if (loginMenu == 4) {
 				System.out.println("종료 합니다");
 				break;

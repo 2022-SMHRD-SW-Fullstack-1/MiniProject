@@ -99,14 +99,14 @@ public class MemberDAO {
 			
 			
 			try {
-				String sql = "select id, pw, nickname from memberInfo";
+				String sql = "select mem_id, mem_pw, user_nick from minimember";
 				psmt = conn.prepareStatement(sql);
 				rs = psmt.executeQuery();
 				
 				while(rs.next()) {
-					String id = rs.getString("id");
-					String pw = rs.getString("pw");
-					String nickname = rs.getString("nickname");
+					String id = rs.getString("mem_id");
+					String pw = rs.getString("mem_pw");
+					String nickname = rs.getString("user_nick");
 					
 					arr.add(new MemberDTO(id, pw, nickname));
 				}
