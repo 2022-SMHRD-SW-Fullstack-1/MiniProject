@@ -3,27 +3,31 @@ package View;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import Controller.mainController;
+import Model.MemberDTO;
+
 public class Main {
 
 	public static void main(String[] args) {
 
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);		
+		mainController mc = new mainController();
 
 		int result = 0;
 
 		while (true) { // 회원가입
-			System.out.println("[1] 회원가입 [2] 로그인 [3] 탈퇴 [4]종료 ");
+			System.out.print("[1] 회원가입 [2] 로그인 [3] 탈퇴 [4]종료 >> ");
 			int loginMenu = sc.nextInt();
 
 			if (loginMenu == 1) {
 				System.out.print("회원가입 할 id를 입력해주세요 >> ");
 				String id = sc.next();
-				System.out.print("사용 할 패스워드를 입력해주세요");
+				System.out.print("사용 할 패스워드를 입력해주세요 >>");
 				String pw = sc.next();
-				System.out.println("사용 할 닉네임을 입력해주세요");
+				System.out.print("사용 할 닉네임을 입력해주세요 >>");
 				String nickname = sc.next();
 
-				// result= .Register(id , pw ,nickname) <<dao에 넘겨줄 회원가입할 정보
+				result= mc.Register(id , pw ,nickname);
 				if (result > 0) {
 					System.out.println("회원가입 성공");
 				} else {
@@ -32,7 +36,7 @@ public class Main {
 			} else if (loginMenu == 2) { // 로그인
 
 				// select 작업
-				ArrayList<MemberDTO> arr = con.conLogin();
+				ArrayList<MemberDTO> arr = mc.Login();
 				int index = -1;
 				System.out.print("아이디를 입려하세요. >> ");
 				String id = sc.next();
