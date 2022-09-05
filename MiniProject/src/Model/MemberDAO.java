@@ -25,7 +25,6 @@ public class MemberDAO {
 				Class.forName("oracle.jdbc.driver.OracleDriver");
 				
 				// 2. 데이터베이스의 url, id, pw 연결
-				//String url = "jdbc:oracle:thin:@localhost:1521:xe";
 				String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
 				String db_id = "campus_k_0830_2";
 				String db_pw = "smhrd2";
@@ -36,8 +35,6 @@ public class MemberDAO {
 					System.out.println("접속 성공");
 				else
 					System.out.println("접속 실패");
-				
-				
 				
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
@@ -69,7 +66,7 @@ public class MemberDAO {
 			
 			
 			try {
-				String sql = "insert into minimember values(?, ?, ?)";
+				String sql = "insert into minimember values(?, ?, ?)";//그냥 문장이기 때문에 try-catch에 넣어주지 않아도 됨
 				
 				psmt = conn.prepareStatement(sql);
 				
@@ -77,7 +74,7 @@ public class MemberDAO {
 				psmt.setString(2, pw);
 				psmt.setString(3, nick);
 				
-				cnt = psmt.executeUpdate();
+				cnt = psmt.executeUpdate();//sql문장 실행해달라는 명령어, 테이블의 값이 수정, 삭제될 때는 Update쓰기
 				
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
@@ -123,7 +120,36 @@ public class MemberDAO {
 			
 			return arr;
 			
+		}
+		
+		//[3]탈퇴
+		public int delete(String id, String pw) {
 			
+			cnt=0;
+			
+			getCon();//DB접속
+
+			try {
+				String sql="delete from Minimember where mem_id='"+id+"'";
+				psmt=conn.prepareStatement(sql);
+				
+				 cnt=psmt.executeUpdate();//sql문 실행해달라는 명령어
+				 
+				 String sql1="select * from Minimember where mem_id='"+id+"'";
+				 rs=psmt.executeQuery(sql1);
+				 if(rs.next()==true) {
+					 cnt=0; //실패
+				 }else {
+					 cnt=1;//성공
+				 }
+				 
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			finally {
+				close();
+			}
+			return cnt;
 			
 		}
 		
