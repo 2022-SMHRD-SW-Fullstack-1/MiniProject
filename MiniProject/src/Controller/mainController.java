@@ -81,7 +81,7 @@ public class mainController {
 		
 		CharacterDTO temp = myC;
 		
-		int temparr[] = {myC.getExperience()[0]-(myC.getExperience()[1]+10*(myC.getLevel()-1)), myC.getExperience()[1]+10}; 
+		int temparr[] = {myC.getExperience()[0]-(50+10*(myC.getLevel()-1)), 50+10*(myC.getLevel()-1)}; 
 		temp.setExperience(temparr);
 		
 		int temparr2[] = {myC.getEnergy()[0]+10,myC.getEnergy()[1]+10};

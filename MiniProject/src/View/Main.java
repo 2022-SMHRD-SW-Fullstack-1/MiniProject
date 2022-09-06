@@ -178,8 +178,7 @@ public class Main {
 															break;
 														} else {
 
-															if (temp.getExperience()[0] >= temp.getExperience()[1]
-																	+ 10 * (temp.getLevel() - 1)) {
+															if (temp.getExperience()[0] >= 50+10*(temp.getLevel()-1)) {
 																temp = mc.levelup(temp);
 																System.out.println(charNick + "(이)가 " + temp.getLevel()
 																		+ "레벨로 올랐습니다");
@@ -235,8 +234,7 @@ public class Main {
 																break;
 															} else {
 
-																if (temp.getExperience()[0] >= temp.getExperience()[1]
-																		+ 10 * (temp.getLevel() - 1)) {
+																if (temp.getExperience()[0] >= 50+10*(temp.getLevel()-1)) {
 																	temp = mc.levelup(temp);
 																}
 																rdtemp = mc.setMyC(temp);
@@ -292,8 +290,7 @@ public class Main {
 																break;
 															} else {
 
-																if (temp.getExperience()[0] >= temp.getExperience()[1]
-																		+ 10 * (temp.getLevel() - 1)) {
+																if (temp.getExperience()[0] >= 50+10*(temp.getLevel()-1)) {
 																	temp = mc.levelup(temp);
 																	System.out.println(charNick + "(이)가 "
 																			+ temp.getLevel() + "레벨로 올랐습니다");
@@ -353,8 +350,7 @@ public class Main {
 															System.out.println("가진 돈이 부족하여 ott시청이 불가합니다");
 														}
 
-														if (temp.getExperience()[0] >= temp.getExperience()[1] // 레벨업
-																+ 10 * (temp.getLevel() - 1)) {
+														if (temp.getExperience()[0] >= 50+10*(temp.getLevel()-1)) {
 															temp = mc.levelup(temp);
 															System.out.println(
 																	charNick + "(이)가 " + temp.getLevel() + "레벨로 올랐습니다");
@@ -404,8 +400,7 @@ public class Main {
 																	temp.getExperience()[1] };
 															temp.setExperience(temarr2);
 
-															if (temp.getExperience()[0] >= temp.getExperience()[1]
-																	+ 10 * (temp.getLevel() - 1)) {
+															if (temp.getExperience()[0] >= 50+10*(temp.getLevel()-1)) {
 																temp = mc.levelup(temp);
 																System.out.println(charNick + "(이)가 " + temp.getLevel()
 																		+ "레벨로 올랐습니다");
@@ -468,8 +463,7 @@ public class Main {
 															ismyCout++;
 															break;
 														} else {
-															if (temp.getExperience()[0] >= temp.getExperience()[1]
-																	+ 10 * (temp.getLevel() - 1)) {
+															if (temp.getExperience()[0] >= 50+10*(temp.getLevel()-1)) {
 																temp = mc.levelup(temp);
 																System.out.println(charNick + "(이)가 " + temp.getLevel()
 																		+ "레벨로 올랐습니다");
