@@ -659,7 +659,7 @@ public class Main {
 				mc.Dropout(id, pw);
 
 			} else if (loginMenu == 4) {
-				System.out.println("게임을 종료 합니다 ●︿●");
+				System.out.println("게임을 종료합니다 ●︿●");
 				break;
 			} else {
 				System.out.println("선택할 수 없는 번호입니다 \n다시 입력해 주세요");
