@@ -135,9 +135,7 @@ public class Main {
 										if (charnum <= temp99) {
 											System.out.println(charNick + "이(가) 갓생에 도전합니다");
 											int ismyCout = 0;
-
 											while (true) { // 원하는 캐릭터 선택시
-
 												if (ismyCout != 0)
 													break;
 												System.out.print("\n[1]갓생 살기 [2] 캐릭터 상태  [3] 이전 >> ");
@@ -192,9 +190,9 @@ public class Main {
 
 																	if (temp.getExperience()[0] >= 50
 																			+ 10 * (temp.getLevel() - 1)) {
-																		temp = mc.levelup(temp);
 																		System.out.println(charNick + "(이)가 "
-																				+ temp.getLevel() + "레벨로 올랐습니다");
+																				+ (temp.getLevel() + 1) + "레벨로 올랐습니다");
+																		temp = mc.levelup(temp);
 																	}
 
 																	rdtemp = mc.setMyC(temp);
@@ -203,6 +201,11 @@ public class Main {
 																		System.out.println("저장성공");
 																	} else {
 																		System.out.println("저장실패");
+																	}
+
+																	if (temp.getLevel() >= 10) {
+																		ismyCout++;
+																		break;
 																	}
 																}
 															}
@@ -250,9 +253,9 @@ public class Main {
 
 																	if (temp.getExperience()[0] >= 50
 																			+ 10 * (temp.getLevel() - 1)) {
-																		temp = mc.levelup(temp);
 																		System.out.println(charNick + "(이)가 "
-																				+ temp.getLevel() + "레벨로 올랐습니다");
+																				+ (temp.getLevel() + 1) + "레벨로 올랐습니다");
+																		temp = mc.levelup(temp);
 																	}
 																	rdtemp = mc.setMyC(temp);
 
@@ -260,6 +263,11 @@ public class Main {
 																		System.out.println("저장성공");
 																	} else {
 																		System.out.println("저장실패");
+																	}
+
+																	if (temp.getLevel() >= 10) {
+																		ismyCout++;
+																		break;
 																	}
 																}
 
@@ -309,9 +317,9 @@ public class Main {
 
 																	if (temp.getExperience()[0] >= 50
 																			+ 10 * (temp.getLevel() - 1)) {
-																		temp = mc.levelup(temp);
 																		System.out.println(charNick + "(이)가 "
-																				+ temp.getLevel() + "레벨로 올랐습니다");
+																				+ (temp.getLevel() + 1) + "레벨로 올랐습니다");
+																		temp = mc.levelup(temp);
 																	}
 
 																	rdtemp = mc.setMyC(temp);
@@ -320,6 +328,11 @@ public class Main {
 																		System.out.println("저장성공");
 																	} else {
 																		System.out.println("저장실패");
+																	}
+
+																	if (temp.getLevel() >= 10) {
+																		ismyCout++;
+																		break;
 																	}
 																}
 
@@ -370,9 +383,9 @@ public class Main {
 
 															if (temp.getExperience()[0] >= 50
 																	+ 10 * (temp.getLevel() - 1)) {
+																System.out.println(charNick + "(이)가 "
+																		+ (temp.getLevel() + 1) + "레벨로 올랐습니다");
 																temp = mc.levelup(temp);
-																System.out.println(charNick + "(이)가 " + temp.getLevel()
-																		+ "레벨로 올랐습니다");
 															}
 
 															rdtemp = mc.setMyC(temp);
@@ -381,6 +394,11 @@ public class Main {
 																System.out.println("저장성공");
 															} else {
 																System.out.println("저장실패");
+															}
+
+															if (temp.getLevel() >= 10) {
+																ismyCout++;
+																break;
 															}
 
 														} else if (activitymenu == 5) {// 드라이브
@@ -422,9 +440,9 @@ public class Main {
 
 																if (temp.getExperience()[0] >= 50
 																		+ 10 * (temp.getLevel() - 1)) {
-																	temp = mc.levelup(temp);
 																	System.out.println(charNick + "(이)가 "
-																			+ temp.getLevel() + "레벨로 올랐습니다");
+																			+ (temp.getLevel() + 1) + "레벨로 올랐습니다");
+																	temp = mc.levelup(temp);
 																}
 
 																rdtemp = mc.setMyC(temp);
@@ -433,6 +451,11 @@ public class Main {
 																	System.out.println("저장성공");
 																} else {
 																	System.out.println("저장실패");
+																}
+
+																if (temp.getLevel() >= 10) {
+																	ismyCout++;
+																	break;
 																}
 															}
 
@@ -487,9 +510,9 @@ public class Main {
 															} else {
 																if (temp.getExperience()[0] >= 50
 																		+ 10 * (temp.getLevel() - 1)) {
-																	temp = mc.levelup(temp);
 																	System.out.println(charNick + "(이)가 "
-																			+ temp.getLevel() + "레벨로 올랐습니다");
+																			+ (temp.getLevel() + 1) + "레벨로 올랐습니다");
+																	temp = mc.levelup(temp);
 																}
 
 																rdtemp = mc.setMyC(temp);
@@ -498,6 +521,11 @@ public class Main {
 																	System.out.println("저장성공");
 																} else {
 																	System.out.println("저장실패");
+																}
+
+																if (temp.getLevel() >= 10) {
+																	ismyCout++;
+																	break;
 																}
 															}
 
@@ -594,3 +622,4 @@ public class Main {
 		sc.close();
 	}
 }
+
