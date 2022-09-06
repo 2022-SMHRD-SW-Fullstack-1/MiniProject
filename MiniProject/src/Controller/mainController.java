@@ -13,7 +13,8 @@ public class mainController {
 	MemberDAO memdao = new MemberDAO();
 	CharacterDAO chardao = new CharacterDAO();
 	Random rd = new Random();
-
+	AsciicodeController ac= new AsciicodeController();
+	
 	int cnt = 0;
 
 	// 회원가입
@@ -90,10 +91,12 @@ public class mainController {
 		temp.setLevel(myC.getLevel() + 1);
 
 		if (temp.getLevel() == 10 && myC.getAbility() >= 60) {
-			System.out.println(myC.getChanick()+"이(가) 카카오 회장이 되어 모두에게 돈 뿌립니다");
+			ac.King(temp.getType());
+			System.out.println(myC.getChanick()+"이(가) 카카오 회장이 되었습니다 축하드립니다~~~");
 
 		} else if (temp.getLevel() == 10 && myC.getAbility() < 60) {
-			System.out.println(myC.getChanick()+"이(가)어쩔수 없이 정년퇴임 합니다");
+			ac.Goodbye(temp.getType());
+			System.out.println(myC.getChanick()+"이(가) 무사히 정년퇴임을 했습니다 고생하셨습니다~~~");
 		}
 
 		return myC;

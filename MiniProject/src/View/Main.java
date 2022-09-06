@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+import Controller.AsciicodeController;
 import Controller.mainController;
 import Model.CharacterDTO;
 import Model.MemberDTO;
@@ -15,7 +16,7 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		mainController mc = new mainController();
 		Random rd = new Random();
-
+		AsciicodeController ac= new AsciicodeController();
 		int result = 0;
 		int cnt = 0;
 
@@ -127,12 +128,14 @@ public class Main {
 										temp99 = 3;
 									System.out.print("캐릭터를 골라주세요 >> ");
 									int charnum = sc.nextInt();
+									
 									String charNick = nickarr[charnum - 1]; // 고른 캐릭터의 pk(char_nick)을 저장
 									CharacterDTO temp98 = mc.getMyC(charNick);
 									if (temp98.getLevel() >= 10)
 										System.out.println("더이상 플레이 할 수 없는 캐릭터입니다.");
 									else {
 										if (charnum <= temp99) {
+											ac.start(temp98.getType());
 											System.out.println(charNick + "이(가) 갓생에 도전합니다");
 											int ismyCout = 0;
 											while (true) { // 원하는 캐릭터 선택시
@@ -155,6 +158,7 @@ public class Main {
 																System.out.println("에너지가 부족하여 행정업무를 할 수 없습니다");
 																break;
 															} else {
+																ac.admin(temp.getType());
 																System.out.println(charNick + "(이)가 행정업무를 시작합니다");
 																// temp의 스트레스+rd(10~20), 에너지-rd(10~20), 경험치+rd(10~20),
 																// 월급+50+보너스(rd*업무능력*)
@@ -181,6 +185,7 @@ public class Main {
 
 																if (temp.getStress() >= 100) {
 																	System.out.println();
+																	ac.ByeBye(temp.getType());
 																	System.out.println(charNick + "(이)가 퇴사합니다");
 																	// 보따리들고 떠나는 아스키코드 추가
 																	mc.deleteCharacter(charNick);
@@ -215,11 +220,12 @@ public class Main {
 															// 월급+150+보너스(rd*업무능력*)
 															CharacterDTO temp = mc.getMyC(charNick);
 															int rdtemp = 0;
-															rdtemp = rd.nextInt(11) + 10;
+															rdtemp = rd.nextInt(21) + 10;
 															if (rdtemp > temp.getEnergy()[0]) {
 																System.out.println("에너지가 부족하여 미팅을 할 수 없습니다");
 																break;
 															} else {
+																ac.Meeting(temp.getType());
 																System.out.println(charNick + "(이)가 미팅을 시작합니다");
 
 																System.out.println("에너지를 " + rdtemp + "만큼 사용했습니다");
@@ -236,6 +242,13 @@ public class Main {
 																int[] temarr2 = { temp.getExperience()[0] + rdtemp,
 																		temp.getExperience()[1] };
 																temp.setExperience(temarr2);
+																
+																rdtemp = rd.nextInt(9) - 4;
+																if (rdtemp > 0) {
+																	System.out.println(
+																			"성공적인 미팅으로 인해 업무능력이 " + rdtemp + "만큼 증가했습니다");
+																	temp.setAbility(temp.getAbility() + rdtemp);
+																}
 
 																rdtemp = rd.nextInt(5) * temp.getAbility()
 																		/ temp.getLevel(); // 보너스값
@@ -244,6 +257,7 @@ public class Main {
 
 																if (temp.getStress() >= 100) {
 																	System.out.println();
+																	ac.ByeBye(temp.getType());
 																	System.out.println(charNick + "(이)가 퇴사합니다");
 																	// 보따리들고 떠나는 아스키코드 추가
 																	mc.deleteCharacter(charNick);
@@ -283,6 +297,7 @@ public class Main {
 																System.out.println("에너지가 부족합니다");
 																break;
 															} else {
+																ac.WorkOut(temp.getType());
 																System.out.println(charNick + "(이)가 외근 나가 열심히 일을 합니다");
 																// temp의 스트레스+rd(10~20), 에너지-rd(10~20), 경험치+rd(10~20),
 																// 월급+50+보너스(rd*업무능력*)
@@ -308,6 +323,7 @@ public class Main {
 
 																if (temp.getStress() >= 100) {
 																	System.out.println();
+																	ac.ByeBye(temp.getType());
 																	System.out.println(charNick + "(이)가 퇴사합니다");
 
 																	mc.deleteCharacter(charNick);
@@ -346,7 +362,9 @@ public class Main {
 																// 휴식하면서 에너지 경험치 스트레스 수치
 																// temp의 스트레스-rd(10~50) 0일 때 음수로 가지 않게!,
 																// 에너지+rd(10~20), 경험치+rd(5~10), 월급-50
-
+																
+																ac.Ott(temp.getType());
+																
 																System.out.println(charNick + "(이)가 ott를 보면서 힐링합니다");
 																rdtemp = rd.nextInt(11) + 10;
 																if (temp.getStress() - rdtemp < 0) {
@@ -408,7 +426,8 @@ public class Main {
 															if (temp.getPay() < rdtemp) {
 																System.out.println("월급이 부족해서 드라이브를 떠날 수 없습니다");
 															} else {
-
+																
+																ac.Drive(temp.getType());
 																System.out
 																		.println(charNick + "(이)가 페라리를 타고 드라이브를 시작합니다");
 
@@ -460,9 +479,10 @@ public class Main {
 															}
 
 														} else if (activitymenu == 6) {// 월급루팡
-
-															System.out.println(charNick + "(이)가 월급루팡를 시작합니다");
 															CharacterDTO temp = mc.getMyC(charNick);
+
+															ac.Lupin(temp.getType());
+															System.out.println(charNick + "(이)가 월급루팡를 시작합니다");
 															int rdtemp = 0;
 
 															rdtemp = rd.nextInt(11) + 10;
@@ -501,6 +521,7 @@ public class Main {
 
 															if (temp.getAbility() <= 0) {
 																System.out.println();
+																ac.Getout(temp.getType());
 																System.out
 																		.println(charNick + "(이)의 업무능력 미달로 권고사직당했습니다");
 																// 짐싸서 떠나는 아스키코드 추가
@@ -588,7 +609,7 @@ public class Main {
 									System.out.println("삭제할 캐릭터가 존재하지 않습니다");
 								}
 
-							} else if (CharacterMenu == 4) {
+							} else if (CharacterMenu == 4) {//팁
 								System.out.println("스트레스 수치가 너무 높을 시 퇴사합니다");
 								System.out.println("월급루팡을 상사에게 걸리지 않도록 조심하세요. 권고사직 당할 수 있습니다");
 							} else if (CharacterMenu == 5)

@@ -1,6 +1,6 @@
 package Model;
 
-public class 아스키코드Conrtoller {
+public class Asciicode {
 	
 	
 	//춘식이	
