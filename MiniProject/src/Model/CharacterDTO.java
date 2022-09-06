@@ -31,7 +31,7 @@ public class CharacterDTO {
 		this.Experience[0]= 0;
 		this.Experience[1]= 50;
 		this.Level=1;
-		this.Energy[0]=0;
+		this.Energy[0]=100;
 		this.Energy[1]=100;
 		this.ability=rd.nextInt(5)+5;
 		this.stress=0;

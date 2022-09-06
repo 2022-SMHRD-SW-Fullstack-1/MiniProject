@@ -1,6 +1,7 @@
 package View;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 import Controller.mainController;
@@ -13,6 +14,7 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 		mainController mc = new mainController();
+		Random rd = new Random();
 
 		int result = 0;
 		int cnt = 0;
@@ -58,11 +60,11 @@ public class Main {
 						System.out.println("환영합니다~~ " + arr.get(index).getNickname() + "님");
 
 						while (true) {
-							System.out.println("[1] 캐릭터 신규 생성 [2] 캐릭터 선택 [3] 캐릭터 삭제 [4]이전");
+							System.out.println("[1] 캐릭터 신규 생성 [2] 캐릭터 선택 [3] 캐릭터 삭제 [4] Tip [5] 이전");
 							int CharacterMenu = sc.nextInt();
 							int CharacterNum = mc.cNumCheck(id);
 							if (CharacterMenu == 1) {
-								
+
 								if (CharacterNum < 3) {
 									System.out.println("생성할 캐릭터를 골라주세요");
 									System.out.print("[1] 춘식이 [2] 라이언 [3] 프로도 ");
@@ -80,73 +82,131 @@ public class Main {
 								}
 
 							} else if (CharacterMenu == 2) {
-								
+
 								if (CharacterNum == 0) {// 캐릭터를 생성하지 않고 2번을 골랐을경우
 									System.out.println("캐릭터가 생성되지 않았습니다 !! \n캐릭터를 신규생성해주세요!!");
 
 								} else {
 									System.out.println("캐릭터를 골라주세요");
 									String[] nickarr = new String[3];
-
+									int temp99 = 0;
 									nickarr = mc.nickList(id);
 									for (int i = 0; i < 3; i++) {
-										if (nickarr[i] == null)
+										if (nickarr[i] == null) {
+											temp99 = i;
 											break;
+										}
 										System.out.println((i + 1) + "번째 캐릭터 : " + nickarr[i]);
 									}
 									int charnum = sc.nextInt();
-									String charNick = nickarr[charnum - 1]; // 고른 캐릭터의 pk(char_nick)을 저장
-									System.out.println(charNick + "이(가) 갓생에 도전합니다");
-									while (true) { // 원하는 캐릭터 선택시
-										System.out.println("[1]갓생 살기 [2] 캐릭터 상태  [3] 이전");
-										int Charactermenu = sc.nextInt();
-										if (Charactermenu == 1) {
-											System.out.println("갓생살자");
-											while (true) {
-												System.out
-														.println("[1]행정업무 [2]미팅 [3]외근 [4]ott시청 [5]드라이브 [6]월급루팡 [7]이전");
+									if (charnum <= temp99) {
+										String charNick = nickarr[charnum - 1]; // 고른 캐릭터의 pk(char_nick)을 저장
+										System.out.println(charNick + "이(가) 갓생에 도전합니다");
+										int ismyCout = 0;
+										while (true) { // 원하는 캐릭터 선택시
+											if(ismyCout != 0)
+												break;
+											System.out.println("[1]갓생 살기 [2] 캐릭터 상태  [3] 이전");
+											int Charactermenu = sc.nextInt();
+											if (Charactermenu == 1) {
+												System.out.println("갓생살자");
+												while (true) {
+													System.out.println(
+															"[1]행정업무 [2]미팅 [3]외근 [4]ott시청 [5]드라이브 [6]월급루팡 [7]이전");
 
-												int activitymenu = sc.nextInt();
-												if (activitymenu == 1) {
-													// 행정업무를 하면 능력치와 스트레스 수치 저장 해야함
+													int activitymenu = sc.nextInt();
+													if (activitymenu == 1) {
+														System.out.println(charNick + "(이)가 행정업무를 시작합니다");
+														CharacterDTO temp = mc.getMyC(charNick);
+														int rdtemp = 0;
+														rdtemp = rd.nextInt(11) + 10;
+														// temp의 스트레스+rd(10~20), 에너지-rd(10~20), 경험치+rd(10~20),
+														// 월급+50+보너스(rd*업무능력*)
+														System.out.println("스트레스가 " + rdtemp + "만큼 올랐습니다");
+														temp.setStress(rdtemp + temp.getStress());
 
-												} else if (activitymenu == 2) {
+														rdtemp = rd.nextInt(11) + 10;
+														System.out.println("에너지를 " + rdtemp + "만큼 사용했습니다");
+														int[] temparr = { temp.getEnergy()[0] - rdtemp,
+																temp.getEnergy()[1] };
+														temp.setEnergy(temparr);
 
-												} else if (activitymenu == 3) {
+														rdtemp = rd.nextInt(11) + 10;
+														System.out.println("경험치가 " + rdtemp + "만큼 올랐습니다");
+														int[] temarr2 = { temp.getExperience()[0] + rdtemp,
+																temp.getExperience()[1] };
+														temp.setExperience(temarr2);
 
-												} else if (activitymenu == 4) {
-													// 휴식하면서 에너지 경험치 스트레스 수치
+														rdtemp = rd.nextInt(5) * temp.getAbility() / temp.getLevel(); // 보너스값
+														System.out.println("월급 50과 보너스 " + rdtemp + "를 받았습니다");
+														temp.setPay(temp.getPay() + 50 + rdtemp);
 
-												} else if (activitymenu == 5) {
+														if (temp.getStress() >= 100) {
+															System.out.println();
+															System.out.println(charNick + "(이)가 퇴사합니다");
+															// 보따리들고 떠나는 아스키코드 추가
+															mc.deleteCharacter(charNick);
+															ismyCout++;
+															break;
+														} else {
 
-												} else if (activitymenu == 6) {
+															if (temp.getExperience()[0] >= temp.getExperience()[1]
+																	+ 10 * (temp.getLevel() - 1)) {
+																temp = mc.levelup(temp);
+																System.out.println(charNick+"(이)가 "+temp.getLevel()+"레벨로 올랐습니다");
+															}
 
-												} else if (activitymenu == 7)
-													break;
-												else
-													System.out.println("메뉴에 없는 번호를 선택했습니다.\n정확하게 입력해주세요");
-											} // activitymenu 선택 반복문
+															rdtemp = mc.setMyC(temp);
 
-										} else if (Charactermenu == 2) {
-											// controller에서 가져와야함
-											// nickname, character type ,level, energy, work ability, xp, stress Gauge
-											CharacterDTO myC=mc.getMyC(charNick);
-											System.out.println("==========캐릭터 상태창==========");
-											System.out.println("캐릭터 닉네임 : " + myC.getChanick());
-											System.out.println("캐릭터 타입 : " + myC.getType());
-											System.out.println("캐릭터 레벨 : " + myC.getLevel());
-											System.out.println("캐릭터 경험치 : " + myC.getExperience()[0] + "/" + myC.getExperience()[1]);
-											System.out.println("캐릭터 에너지 : " + myC.getEnergy()[0] + "/" + myC.getEnergy()[1]);
-											System.out.println("캐릭터 업무능력 : " + myC.getAbility());
-											System.out.println("캐릭터 스트레스 : " + myC.getStress());
-											System.out.println("가진 돈 : " + myC.getPay());
+															if (rdtemp == 1) {
+																System.out.println("저장성공");
+															} else {
+																System.out.println("저장실패");
+															}
+														}
 
-										} else if (Charactermenu == 3)
-											break;
-										else
-											System.out.println("메뉴에 없는 번호를 선택했습니다.\n정확하게 입력해주세요");
+													} else if (activitymenu == 2) {
 
-									} // 원하는 캐릭터 선택 반복문
+													} else if (activitymenu == 3) {
+
+													} else if (activitymenu == 4) {
+														// 휴식하면서 에너지 경험치 스트레스 수치
+
+													} else if (activitymenu == 5) {
+
+													} else if (activitymenu == 6) {
+
+													} else if (activitymenu == 7)
+														break;
+													else
+														System.out.println("메뉴에 없는 번호를 선택했습니다.\n정확하게 입력해주세요");
+												} // activitymenu 선택 반복문
+
+											} else if (Charactermenu == 2) {
+												// controller에서 가져와야함
+												// nickname, character type ,level, energy, work ability, xp, stress
+												// Gauge
+												CharacterDTO myC = mc.getMyC(charNick);
+												System.out.println("==========캐릭터 상태창==========");
+												System.out.println("캐릭터 닉네임 : " + myC.getChanick());
+												System.out.println("캐릭터 타입 : " + myC.getType());
+												System.out.println("캐릭터 레벨 : " + myC.getLevel());
+												System.out.println("캐릭터 경험치 : " + myC.getExperience()[0] + "/"
+														+ myC.getExperience()[1]);
+												System.out.println(
+														"캐릭터 에너지 : " + myC.getEnergy()[0] + "/" + myC.getEnergy()[1]);
+												System.out.println("캐릭터 업무능력 : " + myC.getAbility());
+												System.out.println("캐릭터 스트레스 : " + myC.getStress());
+												System.out.println("가진 돈 : " + myC.getPay());
+
+											} else if (Charactermenu == 3)
+												break;
+											else
+												System.out.println("메뉴에 없는 번호를 선택했습니다.\n정확하게 입력해주세요");
+
+										} // 원하는 캐릭터 선택 반복문
+									} else
+										System.out.println("선택할 수 없는 번호입니다.");
 								}
 
 							} else if (CharacterMenu == 3) {
@@ -162,20 +222,21 @@ public class Main {
 										System.out.println((i + 1) + "번째 캐릭터 : " + nickarr[i]);
 									}
 									int charnum = sc.nextInt();
-									
-									int temp=mc.deleteCharacter(nickarr[charnum-1]);
-									if(temp==0) {
+
+									int temp = mc.deleteCharacter(nickarr[charnum - 1]);
+									if (temp == 0) {
 										System.out.println("캐릭터 삭제 실패");
-									}else {
+									} else {
 										System.out.println("캐릭터 삭제 성공");
 									}
-									
 
 								} else {
 									System.out.println("삭제할 캐릭터가 존재하지 않습니다");
 								}
 
 							} else if (CharacterMenu == 4)
+								System.out.println("스트레스 수치가 너무 높을 시 퇴사합니다");
+							else if (CharacterMenu == 5)
 								break;
 							else
 								System.out.println("메뉴에 없는 번호를 선택했습니다.\n정확하게 입력해주세요");

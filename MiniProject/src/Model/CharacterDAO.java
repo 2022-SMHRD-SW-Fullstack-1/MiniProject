@@ -51,7 +51,7 @@ public class CharacterDAO {
 			e.printStackTrace();
 		}
 	}
-
+	
 	public int charNumCheck(String id) {
 		getCon();
 		int charnum = 0;
@@ -104,7 +104,7 @@ public class CharacterDAO {
 		return cnt;
 
 	}
-
+	
 	public String[] nickList(String id) {
 		getCon();
 
@@ -191,6 +191,27 @@ public class CharacterDAO {
 		}
 
 		return myC;
+	}
+
+	public int setchar(CharacterDTO myC) {
+		getCon();
+	
+
+		try {
+			String sql = "update minicharacter set char_exp ="+myC.getExperience()[0]+", char_lv ="+myC.getLevel()+
+					", char_energy="+myC.getEnergy()[0]+",char_ability="+myC.getAbility()+", char_stress="+myC.getStress()+
+					", char_pay="+myC.getPay()+"where char_nick='"+myC.getChanick()+"'";
+
+			psmt = conn.prepareStatement(sql);
+			cnt = psmt.executeUpdate();
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return cnt;
 	}
 
 }
