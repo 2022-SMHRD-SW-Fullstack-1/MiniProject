@@ -31,10 +31,16 @@ public class MemberDAO {
 				
 				conn = DriverManager.getConnection(url, db_id, db_pw);
 				
-				if(conn != null)
-					System.out.println("접속 성공");
-				else
+				
+				
+				if(conn == null)
 					System.out.println("접속 실패");
+
+				//사용자한테 계속 접속 성공이 뜨니까 주석처리
+//				if(conn != null)
+//					System.out.println("접속 성공");
+//				else
+//					System.out.println("접속 실패");
 				
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
