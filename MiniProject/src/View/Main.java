@@ -607,7 +607,6 @@ public class Main {
 
 							} else if (CharacterMenu == 3) {
 								if (CharacterNum > 0) {// << if 변수안에 캐릭터가 생성됐는지 판단한다
-									System.out.println("삭제할 캐릭터를 골라주세요 ( Ĭ ^ Ĭ )\n");
 									System.out.println("=======내 캐릭터 목록=======");
 
 									String[] nickarr = new String[3];
@@ -618,6 +617,7 @@ public class Main {
 											break;
 										System.out.println((i + 1) + "번째 캐릭터 : " + nickarr[i]);
 									}
+									System.out.print("\n삭제할 캐릭터를 골라주세요 ( Ĭ ^ Ĭ ) >> ");
 									int charnum = sc.nextInt();
 
 									int temp = mc.deleteCharacter(nickarr[charnum - 1]);
