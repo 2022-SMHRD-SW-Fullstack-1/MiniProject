@@ -391,13 +391,13 @@ public class Main {
 															System.out.println("든을 " + cost + "만큼 썼습니다");
 															temp.setPay(temp.getPay() - cost);
 
-															rdtemp = rd.nextInt(11) + 10;
+															rdtemp = (rd.nextInt(11) + 10)*(cost/50);
 															if (temp.getStress() - rdtemp < 0)
 																rdtemp = temp.getStress();
 															System.out.println("스트레스가 " + rdtemp + "만큼 감소했습니다");
 															temp.setStress(temp.getStress() - rdtemp);
 
-															rdtemp = rd.nextInt(11) + 10;
+															rdtemp = (rd.nextInt(11) + 10)*(cost/50);
 															if (temp.getEnergy()[0] + rdtemp > 100
 																	+ 10 * (temp.getLevel() - 1))
 																rdtemp = rdtemp - (temp.getEnergy()[0] + rdtemp - 100
@@ -571,6 +571,7 @@ public class Main {
 				System.out.print("비밀번호를 입력하세요: ");
 				String pw = sc.next();
 				System.out.println("삭제되었습니다.");
+				mc.idlinknickdelete(id);
 				mc.Dropout(id, pw);
 
 			} else if (loginMenu == 4) {
