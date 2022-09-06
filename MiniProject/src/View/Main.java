@@ -148,7 +148,7 @@ public class Main {
 														int rdtemp = rd.nextInt(11) + 10;
 														
 														if (rdtemp > temp.getEnergy()[0]) {
-															System.out.println("에너지가 부족하여 미팅을 할 수 없습니다");
+															System.out.println("에너지가 부족하여 행정업무를 할 수 없습니다");
 															break;
 														} else {
 															System.out.println(charNick + "(이)가 행정업무를 시작합니다");
