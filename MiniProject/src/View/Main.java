@@ -144,52 +144,60 @@ public class Main {
 
 													int activitymenu = sc.nextInt();
 													if (activitymenu == 1) { // 행정업무
-														System.out.println(charNick + "(이)가 행정업무를 시작합니다");
 														CharacterDTO temp = mc.getMyC(charNick);
-														int rdtemp = 0;
-														rdtemp = rd.nextInt(11) + 10;
-														// temp의 스트레스+rd(10~20), 에너지-rd(10~20), 경험치+rd(10~20),
-														// 월급+50+보너스(rd*업무능력*)
-														System.out.println("스트레스가 " + rdtemp + "만큼 올랐습니다");
-														temp.setStress(rdtemp + temp.getStress());
-
-														rdtemp = rd.nextInt(11) + 10;
-														System.out.println("에너지를 " + rdtemp + "만큼 사용했습니다");
-														int[] temparr = { temp.getEnergy()[0] - rdtemp,
-																temp.getEnergy()[1] };
-														temp.setEnergy(temparr);
-
-														rdtemp = rd.nextInt(11) + 10;
-														System.out.println("경험치가 " + rdtemp + "만큼 올랐습니다");
-														int[] temarr2 = { temp.getExperience()[0] + rdtemp,
-																temp.getExperience()[1] };
-														temp.setExperience(temarr2);
-
-														rdtemp = rd.nextInt(5) * temp.getAbility() / temp.getLevel(); // 보너스값
-														System.out.println("월급 50과 보너스 " + rdtemp + "를 받았습니다");
-														temp.setPay(temp.getPay() + 50 + rdtemp);
-
-														if (temp.getStress() >= 100) {
-															System.out.println();
-															System.out.println(charNick + "(이)가 퇴사합니다");
-															// 보따리들고 떠나는 아스키코드 추가
-															mc.deleteCharacter(charNick);
-															ismyCout++;
+														int rdtemp = rd.nextInt(11) + 10;
+														
+														if (rdtemp > temp.getEnergy()[0]) {
+															System.out.println("에너지가 부족하여 미팅을 할 수 없습니다");
 															break;
 														} else {
+															System.out.println(charNick + "(이)가 행정업무를 시작합니다");
+															// temp의 스트레스+rd(10~20), 에너지-rd(10~20), 경험치+rd(10~20),
+															// 월급+50+보너스(rd*업무능력*)
+															
+															System.out.println("에너지를 " + rdtemp + "만큼 사용했습니다");
+															int[] temparr = { temp.getEnergy()[0] - rdtemp,
+																	temp.getEnergy()[1] };
+															temp.setEnergy(temparr);
+															
+															rdtemp = rd.nextInt(11) + 10;
+															System.out.println("스트레스가 " + rdtemp + "만큼 올랐습니다");
+															temp.setStress(rdtemp + temp.getStress());
 
-															if (temp.getExperience()[0] >= 50+10*(temp.getLevel()-1)) {
-																temp = mc.levelup(temp);
-																System.out.println(charNick + "(이)가 " + temp.getLevel()
-																		+ "레벨로 올랐습니다");
-															}
+															rdtemp = rd.nextInt(11) + 10;
+															System.out.println("경험치가 " + rdtemp + "만큼 올랐습니다");
+															int[] temarr2 = { temp.getExperience()[0] + rdtemp,
+																	temp.getExperience()[1] };
+															temp.setExperience(temarr2);
 
-															rdtemp = mc.setMyC(temp);
+															rdtemp = rd.nextInt(5) * temp.getAbility()
+																	/ temp.getLevel(); // 보너스값
+															System.out.println("월급 50과 보너스 " + rdtemp + "를 받았습니다");
+															temp.setPay(temp.getPay() + 50 + rdtemp);
 
-															if (rdtemp == 1) {
-																System.out.println("저장성공");
+															if (temp.getStress() >= 100) {
+																System.out.println();
+																System.out.println(charNick + "(이)가 퇴사합니다");
+																// 보따리들고 떠나는 아스키코드 추가
+																mc.deleteCharacter(charNick);
+																ismyCout++;
+																break;
 															} else {
-																System.out.println("저장실패");
+
+																if (temp.getExperience()[0] >= 50
+																		+ 10 * (temp.getLevel() - 1)) {
+																	temp = mc.levelup(temp);
+																	System.out.println(charNick + "(이)가 "
+																			+ temp.getLevel() + "레벨로 올랐습니다");
+																}
+
+																rdtemp = mc.setMyC(temp);
+
+																if (rdtemp == 1) {
+																	System.out.println("저장성공");
+																} else {
+																	System.out.println("저장실패");
+																}
 															}
 														}
 
@@ -234,10 +242,11 @@ public class Main {
 																break;
 															} else {
 
-																if (temp.getExperience()[0] >= 50+10*(temp.getLevel()-1)) {
+																if (temp.getExperience()[0] >= 50
+																		+ 10 * (temp.getLevel() - 1)) {
 																	temp = mc.levelup(temp);
-																	System.out.println(charNick + "(이)가 " + temp.getLevel()
-																	+ "레벨로 올랐습니다");
+																	System.out.println(charNick + "(이)가 "
+																			+ temp.getLevel() + "레벨로 올랐습니다");
 																}
 																rdtemp = mc.setMyC(temp);
 
@@ -292,7 +301,8 @@ public class Main {
 																break;
 															} else {
 
-																if (temp.getExperience()[0] >= 50+10*(temp.getLevel()-1)) {
+																if (temp.getExperience()[0] >= 50
+																		+ 10 * (temp.getLevel() - 1)) {
 																	temp = mc.levelup(temp);
 																	System.out.println(charNick + "(이)가 "
 																			+ temp.getLevel() + "레벨로 올랐습니다");
@@ -352,7 +362,8 @@ public class Main {
 															System.out.println("가진 돈이 부족하여 ott시청이 불가합니다");
 														}
 
-														if (temp.getExperience()[0] >= 50+10*(temp.getLevel()-1)) {
+														if (temp.getExperience()[0] >= 50
+																+ 10 * (temp.getLevel() - 1)) {
 															temp = mc.levelup(temp);
 															System.out.println(
 																	charNick + "(이)가 " + temp.getLevel() + "레벨로 올랐습니다");
@@ -402,7 +413,8 @@ public class Main {
 																	temp.getExperience()[1] };
 															temp.setExperience(temarr2);
 
-															if (temp.getExperience()[0] >= 50+10*(temp.getLevel()-1)) {
+															if (temp.getExperience()[0] >= 50
+																	+ 10 * (temp.getLevel() - 1)) {
 																temp = mc.levelup(temp);
 																System.out.println(charNick + "(이)가 " + temp.getLevel()
 																		+ "레벨로 올랐습니다");
@@ -465,7 +477,8 @@ public class Main {
 															ismyCout++;
 															break;
 														} else {
-															if (temp.getExperience()[0] >= 50+10*(temp.getLevel()-1)) {
+															if (temp.getExperience()[0] >= 50
+																	+ 10 * (temp.getLevel() - 1)) {
 																temp = mc.levelup(temp);
 																System.out.println(charNick + "(이)가 " + temp.getLevel()
 																		+ "레벨로 올랐습니다");
@@ -541,8 +554,7 @@ public class Main {
 							} else if (CharacterMenu == 4) {
 								System.out.println("스트레스 수치가 너무 높을 시 퇴사합니다");
 								System.out.println("월급루팡을 상사에게 걸리지 않도록 조심하세요. 권고사직 당할 수 있습니다");
-							}
-							else if (CharacterMenu == 5)
+							} else if (CharacterMenu == 5)
 								break;
 							else
 								System.out.println("메뉴에 없는 번호를 선택했습니다.\n정확하게 입력해주세요");
