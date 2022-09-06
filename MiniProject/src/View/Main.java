@@ -20,7 +20,7 @@ public class Main {
 		int cnt = 0;
 
 		while (true) { // 회원가입
-			System.out.print("[1] 회원가입 [2] 로그인 [3] 탈퇴 [4]종료 >> ");
+			System.out.print("\n[1] 회원가입 [2] 로그인 [3] 탈퇴 [4]종료 >> ");
 			int loginMenu = sc.nextInt();
 
 			if (loginMenu == 1) {
@@ -73,7 +73,7 @@ public class Main {
 						System.out.println("환영합니다~~ " + arr.get(index).getNickname() + "님");
 
 						while (true) {
-							System.out.println("[1] 캐릭터 신규 생성 [2] 캐릭터 선택 [3] 캐릭터 삭제 [4] Tip [5] 이전");
+							System.out.print("\n[1] 캐릭터 신규 생성 [2] 캐릭터 선택 [3] 캐릭터 삭제 [4] Tip [5] 이전 >> ");
 							int CharacterMenu = sc.nextInt();
 							int CharacterNum = mc.cNumCheck(id);
 							if (CharacterMenu == 1) {
@@ -113,7 +113,6 @@ public class Main {
 									System.out.println("캐릭터가 생성되지 않았습니다 !! \n캐릭터를 신규생성해주세요!!");
 
 								} else {
-									System.out.println("캐릭터를 골라주세요");
 									String[] nickarr = new String[3];
 									int temp99 = 0;
 									nickarr = mc.nickList(id);
@@ -126,6 +125,7 @@ public class Main {
 									}
 									if (temp99 == 0 && nickarr[2] != null)
 										temp99 = 3;
+									System.out.print("캐릭터를 골라주세요 >> ");
 									int charnum = sc.nextInt();
 									if (charnum <= temp99) {
 										String charNick = nickarr[charnum - 1]; // 고른 캐릭터의 pk(char_nick)을 저장
@@ -134,13 +134,13 @@ public class Main {
 										while (true) { // 원하는 캐릭터 선택시
 											if (ismyCout != 0)
 												break;
-											System.out.println("[1]갓생 살기 [2] 캐릭터 상태  [3] 이전");
+											System.out.print("\n[1]갓생 살기 [2] 캐릭터 상태  [3] 이전 >> ");
 											int Charactermenu = sc.nextInt();
 											if (Charactermenu == 1) {
 												System.out.println("갓생살자");
 												while (true) {
-													System.out.println(
-															"[1]행정업무 [2]미팅 [3]외근 [4]ott시청 [5]드라이브 [6]월급루팡 [7]이전");
+													System.out.print(
+															"\n[1]행정업무 [2]미팅 [3]외근 [4]ott시청 [5]드라이브 [6]월급루팡 [7]이전 >> ");
 
 													int activitymenu = sc.nextInt();
 													if (activitymenu == 1) { // 행정업무
@@ -236,6 +236,8 @@ public class Main {
 
 																if (temp.getExperience()[0] >= 50+10*(temp.getLevel()-1)) {
 																	temp = mc.levelup(temp);
+																	System.out.println(charNick + "(이)가 " + temp.getLevel()
+																	+ "레벨로 올랐습니다");
 																}
 																rdtemp = mc.setMyC(temp);
 
@@ -536,8 +538,10 @@ public class Main {
 									System.out.println("삭제할 캐릭터가 존재하지 않습니다");
 								}
 
-							} else if (CharacterMenu == 4)
+							} else if (CharacterMenu == 4) {
 								System.out.println("스트레스 수치가 너무 높을 시 퇴사합니다");
+								System.out.println("월급루팡을 상사에게 걸리지 않도록 조심하세요. 권고사직 당할 수 있습니다");
+							}
 							else if (CharacterMenu == 5)
 								break;
 							else

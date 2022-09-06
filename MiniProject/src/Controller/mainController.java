@@ -84,7 +84,7 @@ public class mainController {
 		int temparr[] = {myC.getExperience()[0]-(50+10*(myC.getLevel()-1)), 50+10*(myC.getLevel()-1)}; 
 		temp.setExperience(temparr);
 		
-		int temparr2[] = {myC.getEnergy()[0]+10,myC.getEnergy()[1]+10};
+		int temparr2[] = {myC.getEnergy()[0]+10,100+10*(myC.getLevel()-1)};
  		temp.setEnergy(temparr2);
  		 		
  		temp.setAbility(myC.getAbility()+(rd.nextInt(6)+2));
