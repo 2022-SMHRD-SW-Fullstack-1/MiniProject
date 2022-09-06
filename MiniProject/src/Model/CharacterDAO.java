@@ -248,4 +248,32 @@ public class CharacterDAO {
 		return charnickck;
 		
 	}
+	
+	
+	//아이디 삭제시 해당 아이디의 캐릭터 삭제
+	public void idlinknickdelete(String id) {
+		getCon();
+		
+		try {
+			String sql = "delete from minicharacter where mem_id='"+id+"'";
+
+			psmt = conn.prepareStatement(sql);
+			cnt=psmt.executeUpdate();//sql문 실행해달라는 명령어
+			 
+			 String sql1="select * from minicharacter where mem_id='"+id+"'";
+			 rs=psmt.executeQuery(sql1);
+			 if(rs.next()==true) {
+				 cnt=0; //실패
+			 }else {
+				 cnt=1;//성공
+			 }
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		
+		
+	}
 }
