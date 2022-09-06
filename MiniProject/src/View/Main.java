@@ -55,7 +55,7 @@ public class Main {
 					if (result > 0) {
 						System.out.println("\n가입해주셔서 감사합니다 (≧∇≦)/");
 					} else {
-						System.out.println("회원가입이 되지 않았습니다 다시 시도해 주세요");
+						System.out.println("회원가입이 완료되지 않았습니다 다시 시도해 주세요");
 					}
 				}
 			} else if (loginMenu == 2) { // 로그인
@@ -216,9 +216,9 @@ public class Main {
 																	rdtemp = mc.setMyC(temp);
 
 																	if (rdtemp == 1) {
-																		System.out.println("저장성공");
+																		System.out.println("자동 저장");
 																	} else {
-																		System.out.println("저장실패");
+																		System.out.println("자동 저장 실패");
 																	}
 
 																	if (temp.getLevel() >= 10) {
@@ -287,9 +287,9 @@ public class Main {
 																	rdtemp = mc.setMyC(temp);
 
 																	if (rdtemp == 1) {
-																		System.out.println("저장성공");
+																		System.out.println("자동 저장");
 																	} else {
-																		System.out.println("저장실패");
+																		System.out.println("자동 저장 실패");
 																	}
 
 																	if (temp.getLevel() >= 10) {
@@ -356,9 +356,9 @@ public class Main {
 																	rdtemp = mc.setMyC(temp);
 
 																	if (rdtemp == 1) {
-																		System.out.println("저장성공");
+																		System.out.println("자동 저장");
 																	} else {
-																		System.out.println("저장실패");
+																		System.out.println("자동 저장 실패");
 																	}
 
 																	if (temp.getLevel() >= 10) {
@@ -426,9 +426,9 @@ public class Main {
 															rdtemp = mc.setMyC(temp);
 
 															if (rdtemp == 1) {
-																System.out.println("저장성공");
+																System.out.println("자동 저장");
 															} else {
-																System.out.println("저장실패");
+																System.out.println("자동 저장 실패");
 															}
 
 															if (temp.getLevel() >= 10) {
@@ -486,9 +486,9 @@ public class Main {
 																rdtemp = mc.setMyC(temp);
 
 																if (rdtemp == 1) {
-																	System.out.println("저장성공");
+																	System.out.println("자동 저장");
 																} else {
-																	System.out.println("저장실패");
+																	System.out.println("자동 저장 실패");
 																}
 
 																if (temp.getLevel() >= 10) {
@@ -560,9 +560,9 @@ public class Main {
 																rdtemp = mc.setMyC(temp);
 
 																if (rdtemp == 1) {
-																	System.out.println("저장성공");
+																	System.out.println("자동 저장");
 																} else {
-																	System.out.println("저장실패");
+																	System.out.println("자동 저장 실패");
 																}
 
 																if (temp.getLevel() >= 10) {
