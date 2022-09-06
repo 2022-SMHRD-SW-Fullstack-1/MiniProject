@@ -129,7 +129,7 @@ public class Main {
 									int charnum = sc.nextInt();
 									String charNick = nickarr[charnum - 1]; // 고른 캐릭터의 pk(char_nick)을 저장
 									CharacterDTO temp98 = mc.getMyC(charNick);
-									if (temp98.getLevel() == 10)
+									if (temp98.getLevel() >= 10)
 										System.out.println("더이상 플레이 할 수 없는 캐릭터입니다.");
 									else {
 										if (charnum <= temp99) {
