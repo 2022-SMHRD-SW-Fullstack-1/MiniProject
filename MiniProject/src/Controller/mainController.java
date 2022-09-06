@@ -94,5 +94,9 @@ public class mainController {
 		
 		return myC;
 	}
+	public ArrayList<String> charnickck(){
+		
+		return chardao.charnickck();
+	}
 	
 }

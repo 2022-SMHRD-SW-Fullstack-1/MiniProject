@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class CharacterDAO {
 
@@ -214,4 +215,37 @@ public class CharacterDAO {
 		return cnt;
 	}
 
+	
+	public ArrayList<String> charnickck() {
+		getCon();
+		ArrayList<String> charnickck= new ArrayList<>();
+		
+		
+		try {
+			
+			String sql = "select char_nick from minicharacter";
+
+			psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery(sql);
+			
+			while(rs.next()) {
+				
+				String nickname = rs.getString("char_nick");
+				
+				charnickck.add(nickname);
+			}
+			
+			
+			
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		
+		
+		return charnickck;
+		
+	}
 }
