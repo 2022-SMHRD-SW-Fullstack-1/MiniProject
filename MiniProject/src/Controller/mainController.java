@@ -90,10 +90,10 @@ public class mainController {
 		temp.setLevel(myC.getLevel() + 1);
 
 		if (temp.getLevel() == 10 && myC.getAbility() >= 60) {
-			System.out.println("이(가) 카카오 회장이 되어 모두에게 돈 뿌립니다");
+			System.out.println(myC.getChanick()+"이(가) 카카오 회장이 되어 모두에게 돈 뿌립니다");
 
 		} else if (temp.getLevel() == 10 && myC.getAbility() < 60) {
-			System.out.println("어쩔수 없이 정년퇴임 합니다");
+			System.out.println(myC.getChanick()+"이(가)어쩔수 없이 정년퇴임 합니다");
 		}
 
 		return myC;
