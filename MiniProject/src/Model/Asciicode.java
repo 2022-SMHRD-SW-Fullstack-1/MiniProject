@@ -6,13 +6,8 @@ public class Asciicode {
 	//춘식이	
 	public void ChunStrat() { //춘식 등장
 		
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
+				+ ""
 				+ "                                            ,-,                                 \r\n"
 				+ "                                          ,=###=,                               \r\n"
 				+ "                                         .#*, ,=#-                              \r\n"
@@ -59,22 +54,13 @@ public class Asciicode {
 				+ "                             !@$;~~!$@*,          ..      .,~;!!;-.             \r\n"
 				+ "                              -!$$$=;,                                          \r\n"
 				+ "                                 ..                                             \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 
 	}
 	
 	
 	public void chunAdmin() {//춘식 행정
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                        ~,                                                      \r\n"
 				+ "         ,---.         .=:  ,                                                   \r\n"
 				+ "        !@@@@=  .#@@@; .=: .#~                                                  \r\n"
@@ -143,21 +129,12 @@ public class Asciicode {
 				+ "                                 -=@@@$*!:::;!=#@@@!,                           \r\n"
 				+ "                                    -:!*======*!~,                              \r\n"
 				+ "                                         ....                                   \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 	}
 	
 	
 	public void chunMeeting() {//춘식 미팅
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                                    ........                                    \r\n"
 				+ "                          ~::,  ,~;*=$$$$$$=*;~, ~;!;-                          \r\n"
 				+ "                        ,$#$$#$$##*;~,....,~;*####*;=#!                         \r\n"
@@ -217,19 +194,12 @@ public class Asciicode {
 				+ "                          #:~~~~~~~~~~~~~~~~~~~~~~~~~~:=.                       \r\n"
 				+ "                              .,,-~~~~~~~~~~~~~~~~-,.                           \r\n"
 				+ "                                        ....                                    \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 	}
 	
 	
 	public void ChunWorkout() {//춘식 외근
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                          -=#$!,......                                          \r\n"
 				+ "                         :$;~~*$=$$$$=*!:-                                      \r\n"
 				+ "                        ,@:    --,..,-~!$#$;                                    \r\n"
@@ -289,18 +259,12 @@ public class Asciicode {
 				+ "                                  .,-~:!!*!:-         .;#;.:$#;    ,$$#;        \r\n"
 				+ "                                                        :@@@:       .~,         \r\n"
 				+ "                                                         ,~,                    \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 		
 	}
 	
 	public void chunOtt() {//춘식 ott
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                                              .~!;-                             \r\n"
 				+ "                                             .==;!$*.                           \r\n"
 				+ "                                             =*.  .$=-                          \r\n"
@@ -366,18 +330,12 @@ public class Asciicode {
 				+ "                           .=$;~~~:*#*,                                         \r\n"
 				+ "                             *@#=$@@;                                           \r\n"
 				+ "                              -!**:.                                            \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 	}
 	
 	public void chunDrive() {//춘식 드라이브
 		
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                                 ..,,..                                         \r\n"
 				+ "                        .;==!:!=$$$$$$$$*;;*=*-                                 \r\n"
 				+ "                        *$~-;=;~,,...,,-~!*:-;$-                                \r\n"
@@ -435,20 +393,12 @@ public class Asciicode {
 				+ "                        ;@@*~,.................-!#@!    -@*.  ;,                \r\n"
 				+ "                         .:=$#$*!;:~~~~~~~:;!=$#=;.     ,;                      \r\n"
 				+ "                            ,-~;!*==$$$$$==*!:~,                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 		
 	}
 	
 	public void chunPaylupin() {//춘식 월급 루팡
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                                                         .:*==!~                \r\n"
 				+ "                                                        ,$#*;!*#*.              \r\n"
 				+ "                                               .~;!*!;~-=$:~~~~:#!              \r\n"
@@ -505,19 +455,11 @@ public class Asciicode {
 				+ "             *#:$;~@-=@#~                                                       \r\n"
 				+ "              :$##*@#$*,                                                        \r\n"
 				+ "               .-:::~,                                                          \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 	}
 	
 	public void chunBye() {//춘식 퇴사
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                                                                 .~:~           \r\n"
 				+ "                                                                 ;@@@:          \r\n"
 				+ "                      ....                                       .-~~.          \r\n"
@@ -588,20 +530,11 @@ public class Asciicode {
 				+ "                                    ,-~;!=$$$=!;~~--~~;=$*~                     \r\n"
 				+ "                                           .-;*#@@@@@@$;.                       \r\n"
 				+ "                                                  ..                            \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 	}
 	
 	public void chunOut() {//춘식 권고사직
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                                 .,                                             \r\n"
 				+ "                               .=##$- .,.    -:-                                \r\n"
 				+ "                              .$=--*######=*####$.                              \r\n"
@@ -659,16 +592,11 @@ public class Asciicode {
 				+ "                     ,~-~*$=!;:~--------~~::;!*=$$*~                            \r\n"
 				+ "                          -;=##$$======$$####=!:-.                              \r\n"
 				+ "                              ,:!**====!:-..                                    \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 	}
 	
 	public void chunGoodbye() {//춘식 정년퇴직
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                                   .~;;:,                                       \r\n"
 				+ "                                  ~$$!!=$:                                      \r\n"
 				+ "                                 -#!    :@:                                     \r\n"
@@ -736,21 +664,11 @@ public class Asciicode {
 				+ "                   ;$;~-~:$!      .;=$$*-  .$*,....~$:                          \r\n"
 				+ "                    ~=$#$=:.         ..     ,=$*!!=#;                           \r\n"
 				+ "                                              ~=$$!,                            \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 	}
 	
 	public void chunKing() {//춘식 회장
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "           .                                                                    \r\n"
 				+ "          .!      -      !=*.     ~                                             \r\n"
 				+ "          ,*      *~     .~=-.;- .$        .,                  :~   :,          \r\n"
@@ -764,10 +682,6 @@ public class Asciicode {
 				+ "              ~$,.,-           ,*!.                                             \r\n"
 				+ "               :$#$!                                                            \r\n"
 				+ "                .,.                                                             \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "                                                                                \r\n"
 				+ "          ,!~,~;*                                                               \r\n"
 				+ "          ~;:;~,=                                                 ;;.,;!,       \r\n"
@@ -816,10 +730,6 @@ public class Asciicode {
 				+ "                                =:~~;!    :!~:*,                                \r\n"
 				+ "                                ,*!!!,    ,!!!-                                 \r\n"
 				+ "                                 ,::.      .,.                                  \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 	}
 	
@@ -833,10 +743,7 @@ public class Asciicode {
 	
 	//라이언
 	public void ryanStrat() {//라이언 등장
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                 ,~                                                             \r\n"
 				+ "                 *@=!-                                                          \r\n"
 				+ "                -=-*==                          .-~~-.                          \r\n"
@@ -900,18 +807,12 @@ public class Asciicode {
 				+ "                                    ;=....                 ....  .              \r\n"
 				+ "                                    -#....                 .                    \r\n"
 				+ "                                     :  ..                                      \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 	}
 	
 	
 	public void ryanAdmin() {
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                                                  .                             \r\n"
 				+ "                               -!!~             :#@@!.                          \r\n"
 				+ "                             -=$==$$,.,,----,,.!#!:;=$,                         \r\n"
@@ -983,17 +884,12 @@ public class Asciicode {
 				+ "                        ,~;;;;;;;;;;;;;;;;;;;;;;;;;;!#=:.                       \r\n"
 				+ "                           .,-~~:::;;;;;;;;;;;;;;::~~-                          \r\n"
 				+ "                                 ...,,,,-----,,,..                              \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 	}
 	
 	public void ryanMeeting() {
 		
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                                             .:=$$=!-                           \r\n"
 				+ "                                             *=:--~;$!                          \r\n"
 				+ "                                            ==,.....-$!                         \r\n"
@@ -1060,32 +956,22 @@ public class Asciicode {
 				+ "                      ,$@**#@$.                       .;;...-$.                 \r\n"
 				+ "                        ~;!:;$.                       .;;.  ,;                  \r\n"
 				+ "                            ,!                        .;:                       \r\n"
-				+ "                                                       .                        \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 		
 	}
 	
 	public void ryanWorkout() {
 		
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
+				+ ""
 				+ "                        ~.       -;      *~  -;                                 \r\n"
 				+ "              ,-        ;*       -$      $~  !:            -#-                  \r\n"
 				+ "              -$~       .#-      .$.     #~  =-           .*:      --           \r\n"
 				+ "               ~#-       ;=       $-     #- .$.           :*      ~@-           \r\n"
 				+ "         *~     :=,       =-      *;     @- :=           ,$,     ~$~            \r\n"
-				+ "         -=;     ;*       :!      ;*     @, !:          .$:     -=~             \r\n"
 				+ "          ,=!     *=      ,=.     ~#    .@.             !*     -#~     ,,       \r\n"
-				+ "           .=*.    =!      ;*     .#.   .$             -=     -$:     ~$:       \r\n"
-				+ "            .!*,   .*:     ,#,     :                   .,    -=:    ,!=-        \r\n"
-				+ "              :#-   ,$~     -.                              ,$:    -$!.         \r\n"
 				+ "               ~#:   -;                                    ,#;    ;#:           \r\n"
 				+ "     ,*-        -=;                                       .=:   ,**,            \r\n"
-				+ "      :$!.       ,=*.                                     .-   :$;.             \r\n"
 				+ "       .*#:        *=.         .!~                            ;#-               \r\n"
 				+ "         -**~       ;-         !$=,  ,-                       -.         ,-     \r\n"
 				+ "           ~=*-                ;=~. ,=$~                               -*$;     \r\n"
@@ -1129,10 +1015,6 @@ public class Asciicode {
 				+ "      ;=:          :  ;*.          .!=$###=!:,                    ,!=,  ,**.    \r\n"
 				+ "     ;$,          *= ~@,             ....                   ,       :#-   ,.    \r\n"
 				+ "     ,           ;= ,$~                                    .$:       ~#;.       \r\n"
-				+ "                :=, *;                                 ~-   -$~       ,**.      \r\n"
-				+ "               :$, !*.                                 ~=    -$,       .!#-     \r\n"
-				+ "              ~#, ~#,        ,                         .=:    :$.        ::     \r\n"
-				+ "             -=~ -$-    -,  ;*          ,..,            -#,    !=.              \r\n"
 				+ "            ,$~ .=:    .=- .#-          !:~;             !*     !!              \r\n"
 				+ "           .#;  !!     ~*  :$           !:~!     ~*       =~    .=:             \r\n"
 				+ "          .*;  :$.     =~  *~     .,    !:~!     ,$.      ~=.    ,$:            \r\n"
@@ -1142,19 +1024,12 @@ public class Asciicode {
 				+ "            .;.     ,$.  ~=       =~    !:-*       =:        =:      ,          \r\n"
 				+ "                    ~:   $~       $-    !:,*       ~*        ,;                 \r\n"
 				+ "                                  .        .        .                           \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 		
 	}
 	
 	public void ryanOtt() {
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                                         .,-,                                   \r\n"
 				+ "                                        :$$$$*,...                              \r\n"
 				+ "                                    .-:*#;~!#@#####$!:~-.  ,~,                  \r\n"
@@ -1210,20 +1085,12 @@ public class Asciicode {
 				+ "                             ,;=$=!-   .-:*#$***@#=$#$!~.                       \r\n"
 				+ "                               ...         ~=#@@@@#!-.                          \r\n"
 				+ "                                              ,--.                              \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 	}
 	
 	public void ryanDrive() {
 		
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                                                        ,--,                    \r\n"
 				+ "                                          .-~~~::::~~~-:=##=:.                  \r\n"
 				+ "                                        -:!$#$=====$##$@@$**$!.                 \r\n"
@@ -1290,20 +1157,13 @@ public class Asciicode {
 				+ "                                    .-~:!$@#$$@=,                               \r\n"
 				+ "                                        .--~~!*-                                \r\n"
 				+ "                                             ..                                 \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 		
 	}
 	
 	public void ryanPaylupin() {
 		
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                                            ~!!:.                               \r\n"
 				+ "                                          ,=$=*$#;                              \r\n"
 				+ "                                          =*-..,:$;                             \r\n"
@@ -1373,18 +1233,13 @@ public class Asciicode {
 				+ "                                                        .!#@$=:@;#$-            \r\n"
 				+ "                                                          -$@@@@@;              \r\n"
 				+ "                                                            .--,                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 		
 	}
 	
 	
 	public void ryanBye() {//라이언 퇴사
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                                                                 .,             \r\n"
 				+ "                                                                 :*             \r\n"
 				+ "                                                                 !#             \r\n"
@@ -1449,20 +1304,11 @@ public class Asciicode {
 				+ "                                      .~!=$$*!::~~~::!=$;           *=          \r\n"
 				+ "                                         .,-:*=$###$=!~,            !;          \r\n"
 				+ "                                                                    ..          \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 	}
 	
 	public void ryanOut() {//라이언 권고사직
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                                         .,,,.                                  \r\n"
 				+ "                             .;##$;  -!$##@@@@#=;-  ;##$:                       \r\n"
 				+ "                            -#$!;!$###$*;:~~~:;*$###$!;*##-                     \r\n"
@@ -1525,18 +1371,11 @@ public class Asciicode {
 				+ "                             *$-,,-#!                    ,#~...-#~              \r\n"
 				+ "                             .*#$$$*.                     *=:~:$*               \r\n"
 				+ "                               -~-,                       .!$#$;.               \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 	}
 	
 	public void ryanGoodbye() {//라이언 정년퇴직
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                                  .~:;!!;:~.     ~;:,                           \r\n"
 				+ "                    .---,    ,~;=##$$====$$##=;;#$$$#$:.                        \r\n"
 				+ "                   ;=$$$$!,~*$$*;~--,,..,,--~;##:-,,-;#*.                       \r\n"
@@ -1601,17 +1440,11 @@ public class Asciicode {
 				+ "                            :$.                   .,$~......;                   \r\n"
 				+ "                            ,!.                  ..,$~...                       \r\n"
 				+ "                                                 ...!,                          \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 	}
 	
 	public void ryanKing() {//라이언 회장
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                           .~*#@:                                               \r\n"
 				+ "                          :$$=$#.                                               \r\n"
 				+ "                          $!~~=:                                                \r\n"
@@ -1684,9 +1517,6 @@ public class Asciicode {
 				+ "                                     ..~=                                       \r\n"
 				+ "                                    ...!!                                       \r\n"
 				+ "                                       :,                                       \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 	}
 	
@@ -1699,12 +1529,7 @@ public class Asciicode {
 		
 	public void frodoStrat() {
 		
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                                               -;!;:.                           \r\n"
 				+ "                                             :#$*!!=#-                          \r\n"
 				+ "                            -;*=*!-        ,==:~~~~~;=                          \r\n"
@@ -1770,20 +1595,13 @@ public class Asciicode {
 				+ "                                  !!=;;=~!!                                     \r\n"
 				+ "                                  ~$$!*$!$~                                     \r\n"
 				+ "                                   -:;!:;~                                      \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 		
 	}
 	
 	public void frodoAdmin() {
 		
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                                                      .!##$:                    \r\n"
 				+ "                               -~-,                 ~$@$**=@#~                  \r\n"
 				+ "                            -=@@#@@@*,             :@=~~~~~~*@~                 \r\n"
@@ -1848,18 +1666,13 @@ public class Asciicode {
 				+ "                    ,~;*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*:-.                \r\n"
 				+ "                         ,:;!*=$$$$$$$$$$$$$$$$$$$$$$=*!;:-                     \r\n"
 				+ "                                .-~:;!*=******!!:~-.                            \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 		
 	}
 	
 	public void frodoMeeting() {
 		
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                             ....                                               \r\n"
+		System.out.println(""
 				+ "      -$#@@=               -#@@@@#.                                             \r\n"
 				+ "     =@*;;;$#             !@*:~~:=@-                                            \r\n"
 				+ "    *#~-~~~-$$    .,,,,,,~@;-~~~~-*#.                                           \r\n"
@@ -1924,20 +1737,13 @@ public class Asciicode {
 				+ "            @!;;**#;      =$*=;!@;          ,@#*  #$@.                *@;  =#~  \r\n"
 				+ "            =@##@@#,      :@$$==#=           -;.  ,=;                           \r\n"
 				+ "             ~:~-,         :$##$;                                               \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 		
 	}
 	
 	public void frodoWorkout() {
 		
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                                            ~**;-                               \r\n"
 				+ "                                          .$@$$$@#:                             \r\n"
 				+ "                                         .@$~---~!@!                            \r\n"
@@ -2013,18 +1819,13 @@ public class Asciicode {
 				+ "                                       ,.-;$*=$!~@-                             \r\n"
 				+ "                                          .@@#@$#=                              \r\n"
 				+ "                                           .-;;$!                               \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 		
 	}
 	
 	public void frodoOtt() {
 		
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                    ;             ; .                                           \r\n"
 				+ "                   .#.$          .@ #            .=  ,!                         \r\n"
 				+ "                   .$.$          .@ #            .@ ,,=                         \r\n"
@@ -2089,9 +1890,6 @@ public class Asciicode {
 				+ "                   -#~---!*             !#.                                     \r\n"
 				+ "                    .;*=!~               :@.                                    \r\n"
 				+ "                                          :,                                    \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 		
 	}
@@ -2104,10 +1902,7 @@ public class Asciicode {
 	
 	public void frodoPaylupin() {
 		
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                             ,,                                                 \r\n"
 				+ "                          ,!#$$$*-                                              \r\n"
 				+ "                         .=!~~~:!=!.                                            \r\n"
@@ -2167,18 +1962,13 @@ public class Asciicode {
 				+ "                    ,*=;~~~~~~~~~~~~~~~~~~~~~~~~~:::;;;;;;;;::;:.               \r\n"
 				+ "                     .:;;!!!!!!!;;;;;:;;;!!**=$$$$==**!!!!!**=;                 \r\n"
 				+ "                      :$=**!!***==$$$#$$=*!;:-,.                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 		
 	}
 		
 	
 	public void frodoBye() {//프로도 퇴사
-		System.out.println("\r\n"
-				+ "\r\n"
+		System.out.println(""
 				+ "                                          ...                                   \r\n"
 				+ "                                       ,;=$$$!,                                 \r\n"
 				+ "                                      :#$*;;;$$.                                \r\n"
@@ -2263,8 +2053,7 @@ public class Asciicode {
 	}
 	
 	public void frodoOut() {//프로도 권고사직
-		System.out.println("\r\n"
-				+ "\r\n"
+		System.out.println(""
 				+ "                                                            .....               \r\n"
 				+ "                                                           ....                 \r\n"
 				+ "                                                          ...                   \r\n"
@@ -2342,19 +2131,11 @@ public class Asciicode {
 				+ "                              ~*~;:!=,   @:*;=*;                                \r\n"
 				+ "                              -=;$!@=-   *=$=#$-                                \r\n"
 				+ "                               ;$$$*:     --~,.                                 \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 	}
 	
 	public void frodoGoodbye() {//프로도 정년퇴직
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                          .~*#@@@$:                                             \r\n"
 				+ "                         ~@@$!;:;*@#.                 .!@@@@!.                  \r\n"
 				+ "                        =@!~~~~~~~~$$                -@#!::!#@=                 \r\n"
@@ -2428,18 +2209,11 @@ public class Asciicode {
 				+ "                                   ==:@:$=:@:$$;@:~@-                           \r\n"
 				+ "                                   !@#@$@@#@@@@@@@@=                            \r\n"
 				+ "                                    :!~*:~;.-, , --                             \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 	}
 	
 	public void frodoKing() {//프로도 회장
-		System.out.println("\r\n"
-				+ "\r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
+		System.out.println(""
 				+ "                                           ,-,                                  \r\n"
 				+ "                            ,~!=*:      .;@###@*-     ,!==!:-                   \r\n"
 				+ "                          ,$@#*;!@$    ;@#:~~~:*@#,  ~@=;;!#@@-                 \r\n"
@@ -2515,8 +2289,6 @@ public class Asciicode {
 				+ "                            *;~~~~~~~~~~~:#@@@@@@@@@@@@@@@@@@@@@#=!~-. .        \r\n"
 				+ "                                .,,------;#########$$$==**!:~-.                 \r\n"
 				+ "                                         ,,                                     \r\n"
-				+ "                                                                                \r\n"
-				+ "                                                                                \r\n"
 				+ "");
 	}
 
