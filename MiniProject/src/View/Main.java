@@ -23,7 +23,7 @@ public class Main {
 		System.out.println("【갓생살기?! 야, 나도 할 수 있어!】");
 		
 		System.out.println();
-		System.out.println(">> 지금 바로 갓생살기에 도전해보세요 <<\n   (¬‿¬) 어쩌면 회장이 될지도?!");
+		System.out.println(">> 지금 바로 갓생살기에 도전해보세요 <<\n   어쩌면 회장이 될지도?!");
 		
 		while (true) { // 회원가입
 			System.out.print("\n[1]회원가입 [2]로그인 [3]탈퇴 [4]종료 >> ");
@@ -53,7 +53,7 @@ public class Main {
 
 					result = mc.Register(id, pw, nickname);
 					if (result > 0) {
-						System.out.println("\n가입해주셔서 감사합니다 (≧∇≦)/");
+						System.out.println("\n가입해주셔서 감사합니다");
 					} else {
 						System.out.println("회원가입이 완료되지 않았습니다 다시 시도해 주세요");
 					}
@@ -81,7 +81,7 @@ public class Main {
 
 					if (pw.equals(arr.get(index).getPw())) { // 비밀번호 일치
 						System.out.println();
-						System.out.println("환영합니다~~! " + arr.get(index).getNickname() + "님 （￣ε￣ʃƪ）");
+						System.out.println("환영합니다~~! " + arr.get(index).getNickname() + "님");
 
 						while (true) {
 							System.out.print("\n[1]캐릭터 신규 생성 [2]캐릭터 선택 [3]캐릭터 삭제 [4]Tip [5]이전 >> ");
@@ -90,7 +90,7 @@ public class Main {
 							if (CharacterMenu == 1) {
 
 								if (CharacterNum < 3) {
-									System.out.println("\n생성할 캐릭터를 골라주세요 ଘ(੭˃ᴗ˂)━☆ﾟ.*･｡ﾟ ");
+									System.out.println("\n생성할 캐릭터를 골라주세요");
 									System.out.print("[1]춘식이 [2]라이언 [3]프로도 >> ");
 									int Characterselect = sc.nextInt(); // ArrayList 수정 해야함
 									System.out.print("\n캐릭터 닉네임을 설정해 주세요 >> ");
@@ -109,19 +109,19 @@ public class Main {
 									if (nickck == true) {
 										cnt = mc.newCharacter(charnickname, Characterselect, id);
 										if (cnt > 0) {
-											System.out.println("\n캐릭터 생성이 완료되었습니다 (งᐛ)ว (งᐖ )ว");
+											System.out.println("\n캐릭터 생성이 완료되었습니다");
 										} else {
 											System.out.println("\n캐릭터 생성에 실패하였습니다 다시 시도해 주세요");
 										}
 									}
 								} else {
-									System.out.println("\n더 이상 캐릭터를 생성할 수 없습니다 (´･＿･‘)");
+									System.out.println("\n더 이상 캐릭터를 생성할 수 없습니다");
 								}
 
 							} else if (CharacterMenu == 2) {
 
 								if (CharacterNum == 0) {// 캐릭터를 생성하지 않고 2번을 골랐을경우
-									System.out.println("\n캐릭터가 생성되지 않았습니다!! \n캐릭터를 생성해 주세요!! ε=ε=ε=ε=ε=(；ﾟロﾟ)ว");
+									System.out.println("\n캐릭터가 생성되지 않았습니다!! \n캐릭터를 생성해 주세요!!");
 
 								} else {
 									String[] nickarr = new String[3];
@@ -148,7 +148,7 @@ public class Main {
 									else {
 										if (charnum <= temp99) {
 											ac.start(temp98.getType());
-											System.out.println(charNick + "이(가) 갓생에 도전합니다 ✦‿✦");
+											System.out.println(charNick + "이(가) 갓생에 도전합니다");
 											int ismyCout = 0;
 											while (true) { // 원하는 캐릭터 선택시
 												if (ismyCout != 0)
@@ -156,7 +156,7 @@ public class Main {
 												System.out.print("\n[1]갓생 살기 [2]캐릭터 상태 확인  [3]이전 >> ");
 												int Charactermenu = sc.nextInt();
 												if (Charactermenu == 1) {
-													System.out.println("갓생살기 도전! (ง •̀_•́)ง");
+													System.out.println("갓생살기 도전!");
 													while (true) {
 														System.out.print(
 																"\n[1]행정업무 [2]미팅 [3]외근 [4]ott시청 [5]드라이브 [6]월급루팡 [7]이전 >> ");
@@ -167,7 +167,7 @@ public class Main {
 															int rdtemp = rd.nextInt(11) + 10;
 
 															if (rdtemp > temp.getEnergy()[0]) {
-																System.out.println("에너지가 부족하여 행정업무를 처리할 수 없습니다 (;￢＿￢)");
+																System.out.println("에너지가 부족하여 행정업무를 처리할 수 없습니다");
 																break;
 															} else {
 																ac.admin(temp.getType());
@@ -199,7 +199,7 @@ public class Main {
 																if (temp.getStress() >= 100) {
 																	System.out.println();
 																	ac.ByeBye(temp.getType());
-																	System.out.println(charNick + "(이)가 퇴사합니다 |ʘ‿ʘ)╯");
+																	System.out.println(charNick + "(이)가 퇴사합니다");
 																	// 보따리들고 떠나는 아스키코드 추가
 																	mc.deleteCharacter(charNick);
 																	ismyCout++;
@@ -208,7 +208,7 @@ public class Main {
 
 																	if (temp.getExperience()[0] >= 50
 																			+ 10 * (temp.getLevel() - 1)) {
-																		System.out.println("♪( 'ω' و(و\"");
+																		System.out.println("");
 																		System.out.println(charNick + "(이)가 "+ (temp.getLevel() + 1) + "레벨로 성장합니다");
 																		temp = mc.levelup(temp);
 																	}
@@ -235,7 +235,7 @@ public class Main {
 															int rdtemp = 0;
 															rdtemp = rd.nextInt(21) + 10;
 															if (rdtemp > temp.getEnergy()[0]) {
-																System.out.println("에너지가 부족하여 미팅에 참여할 수 없습니다 (;￢＿￢)");
+																System.out.println("에너지가 부족하여 미팅에 참여할 수 없습니다");
 																break;
 															} else {
 																ac.Meeting(temp.getType());
@@ -271,7 +271,7 @@ public class Main {
 																if (temp.getStress() >= 100) {
 																	System.out.println();
 																	ac.ByeBye(temp.getType());
-																	System.out.println(charNick + "(이)가 퇴사합니다 |ʘ‿ʘ)╯");
+																	System.out.println(charNick + "(이)가 퇴사합니다");
 																	// 보따리들고 떠나는 아스키코드 추가
 																	mc.deleteCharacter(charNick);
 																	ismyCout++;
@@ -280,7 +280,7 @@ public class Main {
 
 																	if (temp.getExperience()[0] >= 50
 																			+ 10 * (temp.getLevel() - 1)) {
-																		System.out.println("♪( 'ω' و(و\"");
+																		System.out.println("");
 																		System.out.println(charNick + "(이)가 "+ (temp.getLevel() + 1) + "레벨로 성장합니다");
 																		temp = mc.levelup(temp);
 																	}
@@ -307,7 +307,7 @@ public class Main {
 
 															rdtemp = rd.nextInt(11) + 20;
 															if (rdtemp > temp.getEnergy()[0]) {
-																System.out.println("에너지가 부족하여 외근을 갈 수 없습니다 (;￢＿￢)");
+																System.out.println("에너지가 부족하여 외근을 갈 수 없습니다");
 																break;
 															} else {
 																ac.WorkOut(temp.getType());
@@ -338,7 +338,7 @@ public class Main {
 																if (temp.getStress() >= 100) {
 																	System.out.println();
 																	ac.ByeBye(temp.getType());
-																	System.out.println(charNick + "(이)가 퇴사합니다 |ʘ‿ʘ)╯");
+																	System.out.println(charNick + "(이)가 퇴사합니다");
 
 																	mc.deleteCharacter(charNick);
 																	ismyCout++;
@@ -347,7 +347,7 @@ public class Main {
 
 																	if (temp.getExperience()[0] >= 50
 																			+ 10 * (temp.getLevel() - 1)) {
-																		System.out.println("♪( 'ω' و(و\"");
+																		System.out.println("");
 																		System.out.println(charNick + "(이)가 "
 																				+ (temp.getLevel() + 1) + "레벨로 성장합니다");
 																		temp = mc.levelup(temp);
@@ -380,7 +380,7 @@ public class Main {
 																
 																ac.Ott(temp.getType());
 																
-																System.out.println(charNick + "(이)가 ott를 보면서 힐링합니다 ( *˘╰╯˘*)");
+																System.out.println(charNick + "(이)가 ott를 보면서 힐링합니다");
 																rdtemp = rd.nextInt(11) + 10;
 																if (temp.getStress() - rdtemp < 0) {
 																	rdtemp = temp.getStress();
@@ -417,7 +417,7 @@ public class Main {
 
 															if (temp.getExperience()[0] >= 50
 																	+ 10 * (temp.getLevel() - 1)) {
-																System.out.println("♪( 'ω' و(و\"");
+																System.out.println("");
 																System.out.println(charNick + "(이)가 "
 																		+ (temp.getLevel() + 1) + "레벨로 성장합니다");
 																temp = mc.levelup(temp);
@@ -446,7 +446,7 @@ public class Main {
 																
 																ac.Drive(temp.getType());
 																System.out
-																		.println(charNick + "(이)가 페라리를 타고 드라이브를 떠납니다 ( *˘╰╯˘*)");
+																		.println(charNick + "(이)가 페라리를 타고 드라이브를 떠납니다");
 																
 																System.out.println();
 																int cost = rdtemp;
@@ -477,7 +477,7 @@ public class Main {
 
 																if (temp.getExperience()[0] >= 50
 																		+ 10 * (temp.getLevel() - 1)) {
-																	System.out.println("♪( 'ω' و(و\"");
+																	System.out.println("");
 																	System.out.println(charNick + "(이)가 "
 																			+ (temp.getLevel() + 1) + "레벨로 성장합니다");
 																	temp = mc.levelup(temp);
@@ -501,7 +501,7 @@ public class Main {
 															CharacterDTO temp = mc.getMyC(charNick);
 
 															ac.Lupin(temp.getType());
-															System.out.println(charNick + "(이)가 월급루팡를 시작합니다 ( *˘╰╯˘*)");
+															System.out.println(charNick + "(이)가 월급루팡를 시작합니다");
 															int rdtemp = 0;
 															
 															System.out.println();
@@ -535,7 +535,7 @@ public class Main {
 																if (temp.getAbility() <= rdtemp)
 																	rdtemp = temp.getAbility();
 																System.out.println(
-																		"상사에게 걸려서 업무능력이 " + rdtemp + "만큼 감소합니다 (꒪⌓꒪);;");
+																		"상사에게 걸려서 업무능력이 " + rdtemp + "만큼 감소합니다");
 																temp.setAbility(temp.getAbility() - rdtemp);
 															}
 
@@ -543,7 +543,7 @@ public class Main {
 																System.out.println();
 																ac.Getout(temp.getType());
 																System.out
-																		.println(charNick + "(이)가 업무능력 미달로 권고사직당했습니다 (ʘ言ʘ╬)");
+																		.println(charNick + "(이)가 업무능력 미달로 권고사직당했습니다");
 																// 짐싸서 떠나는 아스키코드 추가
 																mc.deleteCharacter(charNick);
 																ismyCout++;
@@ -551,7 +551,7 @@ public class Main {
 															} else {
 																if (temp.getExperience()[0] >= 50
 																		+ 10 * (temp.getLevel() - 1)) {
-																	System.out.println("♪( 'ω' و(و\"");
+																	System.out.println("");
 																	System.out.println(charNick + "(이)가 "
 																			+ (temp.getLevel() + 1) + "레벨로 성장합니다");
 																	temp = mc.levelup(temp);
@@ -617,7 +617,7 @@ public class Main {
 											break;
 										System.out.println((i + 1) + "번째 캐릭터 : " + nickarr[i]);
 									}
-									System.out.print("\n삭제할 캐릭터를 골라주세요 ( Ĭ ^ Ĭ ) >> ");
+									System.out.print("\n삭제할 캐릭터를 골라주세요 >> ");
 									int charnum = sc.nextInt();
 
 									int temp = mc.deleteCharacter(nickarr[charnum - 1]);
@@ -632,6 +632,7 @@ public class Main {
 								}
 
 							} else if (CharacterMenu == 4) {//팁
+								System.out.println();
 								System.out.println("1. 엔딩은 총 4가지 버전이 있습니다 모든 엔딩을 수집해보세요");
 								System.out.println("2. 스트레스 수치가 너무 높아지지 않게 주의하세요");
 								System.out.println("3. 월급루팡을 할 땐 상사에게 걸리지 않도록 주의하세요");
@@ -659,7 +660,7 @@ public class Main {
 				mc.Dropout(id, pw);
 
 			} else if (loginMenu == 4) {
-				System.out.println("게임을 종료합니다 ●︿●");
+				System.out.println("게임을 종료합니다");
 				break;
 			} else {
 				System.out.println("선택할 수 없는 번호입니다 \n다시 입력해 주세요");

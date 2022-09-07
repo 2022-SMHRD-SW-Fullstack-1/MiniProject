@@ -92,11 +92,11 @@ public class mainController {
 
 		if (temp.getLevel() == 10 && myC.getAbility() >= 60) {
 			ac.King(temp.getType());
-			System.out.println(myC.getChanick()+"이(가) 카카5 회장이 되었습니다 축하합니다 ◟(ᵔ ̮ ᵔ)͜💐");
+			System.out.println(myC.getChanick()+"이(가) 카카5 회장이 되었습니다 축하합니다");
 
 		} else if (temp.getLevel() == 10 && myC.getAbility() < 60) {
 			ac.Goodbye(temp.getType());
-			System.out.println(myC.getChanick()+"이(가) 무사히 정년퇴직을 합니다 고생하셨습니다 ✺◟(•‿•)◞✺");
+			System.out.println(myC.getChanick()+"이(가) 무사히 정년퇴직을 합니다 고생하셨습니다");
 		}
 
 		return myC;
